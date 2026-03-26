@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Revest Contact - Set Email Template
+ *
+ * @category  Revest
+ * @package   Revest_Contact
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+<template id="revest_contact_email_template"
+          label="Contact Form Notification"
+          file="contact_email.html"
+          type="html"
+          module="Revest_Contact"
+          area="frontend"/>
+</config>

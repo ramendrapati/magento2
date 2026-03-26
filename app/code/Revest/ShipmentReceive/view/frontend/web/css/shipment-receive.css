@@ -1,0 +1,30 @@
+.checkout-shipment-receive {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.checkout-shipment-receive .step-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.checkout-shipment-receive .step-content {
+    padding-bottom: 20px;
+}
+
+.checkout-shipment-receive .shipment-receive-options .field.choice {
+    margin-bottom: 10px;
+}
+
+.checkout-shipment-receive .shipment-receive-options .field.choice .label {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.checkout-shipment-receive .shipment-receive-options .radio {
+    margin-right: 8px;
+    vertical-align: middle;
+}

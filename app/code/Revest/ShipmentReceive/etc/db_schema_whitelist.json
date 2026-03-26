@@ -1,0 +1,12 @@
+{
+    "quote": {
+        "column": {
+            "shipment_receive": true
+        }
+    },
+    "sales_order": {
+        "column": {
+            "shipment_receive": true
+        }
+    }
+}

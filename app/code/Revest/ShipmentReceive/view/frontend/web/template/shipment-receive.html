@@ -1,0 +1,42 @@
+<div class="shipment-receive-wrapper" data-bind="afterRender: onRender">
+    <div class="step-title" data-bind="i18n: 'Shipment Receive'" data-role="title"></div>
+    <div id="checkout-step-shipment-receive"
+         class="step-content"
+         data-role="content">
+        <div class="shipment-receive-options">
+            <div class="field choice">
+                <input type="radio"
+                       name="shipment_receive"
+                       id="shipment_receive_home"
+                       value="home"
+                       class="radio"
+                       data-bind="checked: shipmentReceive"/>
+                <label for="shipment_receive_home" class="label">
+                    <span data-bind="i18n: 'Home'"></span>
+                </label>
+            </div>
+            <div class="field choice">
+                <input type="radio"
+                       name="shipment_receive"
+                       id="shipment_receive_work"
+                       value="work"
+                       class="radio"
+                       data-bind="checked: shipmentReceive"/>
+                <label for="shipment_receive_work" class="label">
+                    <span data-bind="i18n: 'Work'"></span>
+                </label>
+            </div>
+            <div class="field choice">
+                <input type="radio"
+                       name="shipment_receive"
+                       id="shipment_receive_other"
+                       value="other"
+                       class="radio"
+                       data-bind="checked: shipmentReceive"/>
+                <label for="shipment_receive_other" class="label">
+                    <span data-bind="i18n: 'Other'"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

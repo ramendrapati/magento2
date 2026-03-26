@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Revest Contact - Dependency Injection configuration
+ *
+ * @category  Revest
+ * @package   Revest_Contact
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- API Interface Binding -->
+    <preference for="Revest\Contact\Api\ContactManagementInterface" type="Revest\Contact\Model\ContactManagement"/>
+   <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="revest_contact_listing_data_source" xsi:type="string">
+                  RevestContactGridCollection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="RevestContactGridFilterPool"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+<virtualType name="RevestContactGridCollection"
+             type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <arguments>
+        <argument name="mainTable" xsi:type="string">revest_contact</argument>
+          <argument name="eventPrefix" xsi:type="string">revest_contact_grid_collection</argument>
+        <argument name="eventObject" xsi:type="string">revest_contact_grid_collection</argument>
+        <argument name="resourceModel" xsi:type="string">
+            Revest\Contact\Model\ResourceModel\Contact
+        </argument>
+    </arguments>
+</virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\Reporting">
+        <arguments>
+            <argument name="filterPool" xsi:type="object">RevestContactGridFilterPool</argument>
+        </arguments>
+    </type>
+</config>

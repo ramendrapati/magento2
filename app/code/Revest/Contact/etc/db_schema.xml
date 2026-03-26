@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Revest Contact - Create custom table revest_contact
+ *
+ * @category  Revest
+ * @package   Revest_Contact
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="revest_contact" resource="default" engine="innodb" comment="Revest Contact Table">
+        <column name="entity_id" xsi:type="int" identity="true" nullable="false" unsigned="true"/>
+        <column name="name" xsi:type="varchar" length="255" nullable="false"/>
+        <column name="email" xsi:type="varchar" length="255" nullable="false"/>
+        <column name="telephone" xsi:type="varchar" length="50" nullable="true"/>
+        <column name="comment" xsi:type="text" nullable="false"/>
+        <column name="created_at" xsi:type="timestamp" default="CURRENT_TIMESTAMP"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

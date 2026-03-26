@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Revest Contact - Admin Configuration
+ *
+ * @category  Revest
+ * @package   Revest_Contact
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="revest_contact" translate="label" sortOrder="900"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Contact Manager</label>
+            <tab>general</tab>
+            <resource>Revest_Contact::contact</resource>
+            <group id="general" translate="label"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+
+                <field id="recipients" translate="label"
+                       type="textarea"
+                       sortOrder="10"
+                       showInDefault="1">
+
+                    <label>Email Recipients</label>
+                    <comment>Comma-separated email addresses</comment>
+
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

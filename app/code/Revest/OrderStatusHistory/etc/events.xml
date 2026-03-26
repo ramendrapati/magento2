@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- Listen to order save event -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <!-- Trigger before order is saved -->
+    <event name="sales_order_save_before">
+        <observer name="revest_order_status_change"
+                  instance="Revest\OrderStatusHistory\Observer\OrderStatusChange"/>
+    </event>
+
+</config>

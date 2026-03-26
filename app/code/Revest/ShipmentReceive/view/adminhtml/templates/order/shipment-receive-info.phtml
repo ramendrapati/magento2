@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var \Revest\ShipmentReceive\Block\Adminhtml\Order\ShipmentReceiveInfo $block
+ */
+$shipmentReceiveLabel = $block->getShipmentReceiveLabel();
+?>
+<?php if ($shipmentReceiveLabel): ?>
+<div class="admin__page-section-item-content">
+    <div class="admin__page-section-item-title">
+        <span class="title"><?= $block->escapeHtml(__('Shipment Receive')) ?></span>
+    </div>
+    <div>
+        <strong><?= $block->escapeHtml(__('Receive At:')) ?></strong>
+        <?= $block->escapeHtml($shipmentReceiveLabel) ?>
+    </div>
+</div>
+<?php endif; ?>

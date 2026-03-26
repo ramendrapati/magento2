@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Revest Contact - Admin menu configuration
+ *
+ * @category  Revest
+ * @package   Revest_Contact
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+
+    <menu>
+        <add id="Revest_Contact::contact"
+             title="Contact Requests"
+             module="Revest_Contact"
+             sortOrder="100"
+             parent="Magento_Backend::content"
+             action="revest_contact/contact/index"
+             resource="Revest_Contact::contact"/>
+    </menu>
+
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Revest Contact - ACL configuration
+ *
+ * @category  Revest
+ * @package   Revest_Contact
+ */
+-->
+<acl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+
+    <resources>
+        <resource id="Magento_Backend::admin">
+            <!-- Define permission -->
+            <resource id="Revest_Contact::contact" title="Contact Requests" sortOrder="100"/>
+        </resource>
+    </resources>
+
+</acl>
